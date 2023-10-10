@@ -28,6 +28,10 @@ CONFIG_FILES = "\
     send_return_seq.json \
 "
 
+EXTRA_OECMAKE = "\
+    -DWITH_JACK=TRUE \
+"
+
 do_install:append() {
     install -d ${D}${CONFIG_FILES_DIR}
     install -d ${D}${SOUND_FILES_DIR}
